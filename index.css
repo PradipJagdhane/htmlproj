@@ -1,33 +1,22 @@
 .maindiv {
-    width: 1839px;
-    height: 920px;
     background: #DDE0FF;
     background-image: url(/assets/609c7731d037f1b65d00906a7bc1e241.png);
     background-repeat: no-repeat;
-    opacity: 80%;
-    box-sizing: border-box;
     background-position: right;
-    
-
+    background-size: cover; /* Ensure the background image covers the container */
+    height: 100vh; /* Full viewport height */
 }
 
 .logindiv {
-    width: 780px;
-    height: 850px;
-    margin-top: 40px;
-    margin-left: 30px;
-    padding: 50px;
+    padding: 30px;
     border-radius: 12px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 15px 0px #000000BF;
-    box-sizing: border-box;
-    
-
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
     font-family: fantasy;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 28px;
     line-height: 48px;
     color: #717070;
@@ -36,22 +25,16 @@ h3 {
 }
 
 p {
-    width: 212px;
-    height: 36px;
-    top: 739px;
-    left: 552px;
-    gap: 0px;
-    opacity: 0px;
     color: #A08CB1;
-    float: right;
+    opacity: 0.6;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
-#btn{
-    width: 670px;
-    height: 60px;
-    margin-top: 48px;
+#btn {
     border-radius: 8px;
     background: #5C218B;
-   
-
+    color: #fff;
+    padding: 15px; /* Adjust padding for better button size */
+    font-size: 16px; /* Increase font size for readability */
 }

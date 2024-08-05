@@ -1,29 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="home.css" />
-    
 </head>
+
 <body>
-    <div class="maindiv">
-        <button class="btn">Logout</button>
-    </div>
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#category">Category</a></li>
-            </ul>
-        </nav>
-        <div class="main-content">
-            <h1 id="home">Welcome to the Home Page</h1>
-            <!-- Add your main content here -->
+    <div class="container-fluid">
+        <header class="maindiv">
+            <button class="btn btn-default" data-toggle="modal" data-target="#logoutModal">Logout</button>
+        </header>
+        <div class="row">
+            <nav class="col-xs-4 col-sm-4 col-md-3 col-lg-2 sidebar">
+                <ul class="nav">
+                    <li><a href="#" data-target="home">Home</a></li>
+                    <li><a href="#" data-target="product">Product</a></li>
+                    <li><a href="#" data-target="category">Category</a></li>
+                </ul>
+            </nav>
+            <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10 main-content">
+                <div id="home" class="content-section">
+                    <h1>Welcome to the Home Page</h1>
+                    <p>This is the home section content.</p>
+                </div>
+                <div id="product" class="content-section" style="display:none;">
+                    <h1>Product Page</h1>
+                    <i class="fa-solid fa-house"></i>
+                    <p>This is the product section content.</p>
+                    <table class="table table-hover col-lg-4">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Item 1</td>
+                                <td>This is the description for item 1.</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Item 2</td>
+                                <td>This is the description for item 2.</td>
+                                <td>Inactive</td>
+                            </tr>
+                            <tr>
+                                <td>Item 3</td>
+                                <td>This is the description for item 3.</td>
+                                <td>Active</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="category" class="content-section" style="display:none;">
+                    <h1>Category Page</h1>
+                    <p>This is the category section content.</p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Item 1</td>
+                                <td>This is the description for item 1.</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Item 2</td>
+                                <td>This is the description for item 2.</td>
+                                <td>Inactive</td>
+                            </tr>
+                            <tr>
+                                <td>Item 3</td>
+                                <td>This is the description for item 3.</td>
+                                <td>Active</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
         </div>
-     
     </div>
+
+    <div id="logoutModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color: #020202;">Confirm Logout</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="color: #686868;">Are you sure you want to log out?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" id="logoutConfirm" class="btn btn-danger">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            $('#logoutConfirm').on('click', function () {
+                // Redirect to the login page
+                window.location.href = '/index.html';
+            });
+        });
+
+        // JavaScript for handling sidebar link clicks and showing content
+        $(document).ready(function () {
+            $('nav.sidebar a').on('click', function (e) {
+                e.preventDefault(); // Prevent default anchor behavior
+
+                // Get the target content ID from the data attribute
+                var targetId = $(this).data('target');
+
+                // Hide all content sections
+                $('.content-section').hide();
+
+                // Show the selected content section
+                $('#' + targetId).show();
+            });
+        });
+    </script>
 </body>
+
 </html>
