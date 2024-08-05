@@ -4,35 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <style>
-        .home{
-            background: #662671;
-            display: flex;
-            flex-direction: column;
-        }
+    <link rel="stylesheet" href="home.css" />
     
-    </style>
-    <link rel="stylesheet" href="home.css"/>
 </head>
 <body>
-    <div class="home" style="width: 115rem; height: 4rem; border: 1px solid black;">
-        <div class="container">
-            <aside class="sidebar">
-                <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
-                <ul>
-                    <li><a href="/Pages/home.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="/Pages/about.html"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="/Pages/service.html"><i class="fas fa-cogs"></i> Services</a></li>
-                    <li><a href="/Pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="/Pages/table.html"><i class="fas fa-id-card"></i> Table</a></li>
-    
-                </ul>
-
-            </aside>
-            
-        </div>
-        <h1>fffff</h1>
+    <div class="maindiv">
+        <button class="btn">Logout</button>
     </div>
-   
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#category">Category</a></li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <h1 id="home">Welcome to the Home Page</h1>
+            <!-- Add your main content here -->
+        </div>
+     
+    </div>
 </body>
 </html>
