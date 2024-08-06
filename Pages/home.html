@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="home.css" />
@@ -27,13 +29,27 @@
             <main class="col-xs-12 col-sm-8 col-md-9 col-lg-10 main-content">
                 <div id="home" class="content-section">
                     <h1>Welcome to the Home Page</h1>
+
                     <p>This is the home section content.</p>
                 </div>
+
+
                 <div id="product" class="content-section" style="display:none;">
-                    <h1>Product Page</h1>
-                    <i class="fa-solid fa-house"></i>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 header-container">
+                            <h1>Product</h1>
+                        </div>
+                        <div class="col-xs-12 col-md-6 action-container">
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass" style="padding: 10px;"></i>
+                            </div>
+                            <div class="add-new">
+                                Add new
+                            </div>
+                        </div>
+                    </div>
                     <p>This is the product section content.</p>
-                    <table class="table table-hover col-lg-4">
+                    <table class="table table-hover col-lg-4" style="border: 1px solid #B0ADAD;">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -57,14 +73,26 @@
                                 <td>This is the description for item 3.</td>
                                 <td>Active</td>
                             </tr>
-                            <!-- Add more rows as needed -->
                         </tbody>
                     </table>
                 </div>
+
                 <div id="category" class="content-section" style="display:none;">
-                    <h1>Category Page</h1>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h1>Category</h1>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass" style="padding: 10px;"></i>
+                            </div>
+                            <div class="addbtn" style="float: right;">
+                                <p class="anew">Add new</p>
+                            </div>
+                        </div>
+                    </div>
                     <p>This is the category section content.</p>
-                    <table class="table table-hover">
+                    <table class="table table-hover" style="border: 1px solid #B0ADAD;">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -88,7 +116,6 @@
                                 <td>This is the description for item 3.</td>
                                 <td>Active</td>
                             </tr>
-                            <!-- Add more rows as needed -->
                         </tbody>
                     </table>
                 </div>

@@ -31,7 +31,8 @@ header .btn {
 nav.sidebar {
     background: #F4F4F4;
     box-shadow: 0px 4px 10px 0px #00000033;
-    height: calc(100vh - 100px); /* Full viewport height minus the height of the header */
+    height: calc(100vh - 100px);
+    /* Full viewport height minus the height of the header */
     padding: 1rem;
 }
 
@@ -59,11 +60,183 @@ nav.sidebar ul li a:hover {
 
 main.main-content {
     padding: 1rem;
-    height: calc(100vh - 100px); /* Full viewport height minus the height of the header */
+    height: calc(100vh - 100px);
+    /* Full viewport height minus the height of the header */
 }
 
 .table thead th {
-    background-color: #FFF8B7; /* Light gray background color */
-    color: #000; /* Optional: set text color */
+    background-color: #FFF8B7;
+    /* Light gray background color */
+    color: #000;
+    /* Optional: set text color */
 }
 
+.search {
+    width: 563px;
+    height: 40px;
+    top: 156px;
+    left: 700px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #B0ADAD;
+    box-sizing: border-box;
+}
+
+.addbtn {
+    width: 110px;
+    height: 40px;
+    top: 153px;
+    left: 1564px;
+    gap: 0px;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0px;
+    background: #662671;
+    color: #FFFFFF;
+    ;
+}
+
+.anew {
+    width: 67px;
+    height: 18px;
+    top: 161px;
+    left: 1585px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+
+}
+
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align items to the right */
+}
+
+.search {
+    margin-right: 10px;
+    /* Space between the search icon and "Add new" */
+}
+
+.add-new {
+    background: #662671;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    /* Optional: Change cursor to pointer to indicate clickable item */
+}
+
+.add-new:hover {
+    background: #5a2060;
+    /* Optional: Change background on hover */
+}
+
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .action-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+}
+
+
+/* reponsiv sidebar*/
+/* Ensure the sidebar is initially vertical */
+.sidebar {
+    background-color: #f8f8f8;
+    /* Optional: Sidebar background color */
+    padding: 15px;
+    /* Optional: Padding for the sidebar */
+}
+
+.sidebar .nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav li {
+    margin-bottom: 10px;
+    /* Space between items in vertical layout */
+}
+
+.sidebar .nav li a {
+    text-decoration: none;
+    color: #333;
+    /* Color of the links */
+    display: block;
+    /* Make the entire list item clickable */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar .nav li a:hover {
+    background-color: #ddd;
+    /* Background color on hover */
+}
+
+/* Media Query for screens less than 768px */
+@media (max-width: 767px) {
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* Space items evenly */
+        padding: 10px 0;
+        height: 200px;
+    }
+
+    @media (max-width: 767px) {
+        nav.sidebar {
+            height: calc(10vh - 100px);
+            width: 340px;
+        }
+
+    }
+
+    @media (max-width: 537px) {
+        nav.sidebar{
+            width: 400px;
+        }
+    }
+
+    .sidebar .nav {
+        display: flex;
+        flex-direction: row;
+        /* Align items horizontally */
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar .nav li {
+        margin: 0;
+        /* Remove vertical margin */
+    }
+
+    .sidebar .nav li a {
+        margin: 0 10px;
+        /* Space between items horizontally */
+        padding: 10px 15px;
+        /* Adjust padding for better spacing */
+    }
+}

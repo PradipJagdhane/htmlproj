@@ -61,7 +61,11 @@
             // Check credentials
             if (email === validUsername && password === validPassword) {
                 // Redirect to the home page if credentials are correct
+                alert("login successful");
+                // window.alert("hh")
+                
                 window.location.href = '/Pages/home.html';
+                
             } else {
                 // Show an alert if credentials are incorrect
                 alert('Invalid username or password');
